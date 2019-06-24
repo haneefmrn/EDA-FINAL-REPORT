@@ -38,7 +38,7 @@ output:
 ### Set working directory and Import raw data
 
 ```{r}
-setwd("~/Desktop/EXPL DATA ANALYSIS/EDA REPORT")
+setwd("~/Desktop/EXPL DATA ANALYSIS/")
 
 gapminder <- read.csv("gapminder.csv")
 
@@ -92,6 +92,14 @@ weightedMean(gapminder$income, w = gapminder$region, na.rm = TRUE)
 
 d <- ggplot(gapminder1, aes(x = population1, y = income))
 d + geom_point()+geom_smooth(method = "lm") + scale_x_continuous(labels = scales::comma) 
+
+```
+
+
+```{r Cluster Analysis, warning = FALSE, echo=TRUE}
+
+gap_cluster <- select(gapminder1, income, life)
+
 
 ```
 Looking at the histogram, a high frequency of income in the range below 50000.
