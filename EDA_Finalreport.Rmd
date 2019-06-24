@@ -15,8 +15,6 @@ output:
     toc: yes
 ---
 
----
-
 ### Data Description
 
 - Country describes the primary variable describes the location of the life expectancy measured
